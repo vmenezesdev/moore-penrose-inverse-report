@@ -1,0 +1,37 @@
+# Ambientes virtuais Python
+env/
+venv/
+.venv/
+src/env/
+
+# Cache e artefatos do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Figuras geradas pelo script na raiz/src (as versões finais ficam em docs/)
+/fig_erro_rank.png
+/fig_ajuste_curva.png
+/fig_condicionamento.png
+/src/fig_erro_rank.png
+/src/fig_ajuste_curva.png
+/src/fig_condicionamento.png
+
+# Artefatos de compilação do LaTeX
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.lof
+docs/*.lot
+docs/*.fls
+docs/*.fdb_latexmk
+docs/*.synctex.gz
+
+# Sistema operacional / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
