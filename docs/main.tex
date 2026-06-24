@@ -144,13 +144,13 @@ Orientador: Prof.\ Dr.\ Francisco Aquino.
 O cálculo numérico pode ser definido como o conjunto de métodos e algoritmos que permitem
 resolver, de forma aproximada e por meio de máquinas digitais, problemas matemáticos que
 raramente possuem solução analítica fechada (BURDEN; FAIRES, 2015; CHAPRA; CANALE, 2016). Como observa Aquino (2020), trata-se de uma
-disciplina de cunho eminentemente prático, voltada a engenheiros e cientistas que usam os
-métodos numéricos como ferramenta para a resolução de problemas reais. Equações não
+disciplina com foco bastante prático, voltada a engenheiros e cientistas que usam os
+métodos numéricos como ferramenta para resolver problemas reais. Equações não
 lineares, sistemas lineares de grande porte, integração de funções sem primitiva conhecida e
-ajuste de modelos a dados experimentais são situações cotidianas em que a resposta exata é
-inacessível e a aproximação controlada torna-se indispensável.
+ajuste de modelos a dados experimentais são situações cotidianas em que a resposta exata não
+pode ser obtida e a aproximação controlada torna-se indispensável.
 
-Para a Engenharia de Computação e de Telecomunicações, esse ferramental faz parte do dia a dia. Simulação de circuitos, processamento de sinais, codificação de canal, otimização de redes e aprendizado de máquina apoiam-se fortemente em operações numéricas sobre matrizes e vetores. Há aí também uma relação histórica: o cálculo numérico amadureceu junto com a ciência da computação. A necessidade de resolver problemas grandes foi um dos motores da construção das primeiras máquinas digitais, e essas máquinas tornaram viáveis métodos antes impraticáveis em escala manual (VON NEUMANN; GOLDSTINE, 1947; CERUZZI, 2003).
+Para a Engenharia de Computação e de Telecomunicações, esse ferramental faz parte do dia a dia. Simulação de circuitos, processamento de sinais, codificação de canal, otimização de redes e aprendizado de máquina apoiam-se fortemente em operações numéricas sobre matrizes e vetores. Há também uma relação histórica: o cálculo numérico amadureceu junto com a ciência da computação. A necessidade de resolver problemas grandes foi uma das principais motivações para a construção das primeiras máquinas digitais, e essas máquinas tornaram viáveis métodos antes impraticáveis em escala manual (VON NEUMANN; GOLDSTINE, 1947; CERUZZI, 2003).
 
 \noindent\textbf{Objetivo geral.} Analisar a história do cálculo numérico e sua relação com a
 ciência da computação, aprofundando um tópico específico da disciplina: a \emph{pseudoinversa
@@ -168,7 +168,7 @@ O Capítulo~1 traça um panorama histórico do cálculo numérico e de sua liga�
 % ===================== CAPITULO 1 - HISTORIA ================================
 \chapter{História do cálculo numérico e sua relação com a computação}
 
-Este capítulo traça um panorama histórico do cálculo numérico, com atenção à evolução dos métodos e à sua ligação com a ciência da computação. Há um padrão que se repete: muitos métodos numéricos nasceram de necessidades práticas de cálculo e logo esbarraram no limite do que uma pessoa consegue computar à mão. Esse limite foi sendo deslocado por tabelas, instrumentos mecânicos, computadores humanos e, finalmente, máquinas digitais.
+Este capítulo traça um panorama histórico do cálculo numérico, com atenção à evolução dos métodos e à sua ligação com a ciência da computação. Há um padrão que se repete: muitos métodos numéricos nasceram de necessidades práticas de cálculo e logo encontraram o limite do que uma pessoa consegue computar à mão. Esse limite foi sendo deslocado por tabelas, instrumentos mecânicos, computadores humanos e, finalmente, máquinas digitais.
 
 \section{Marcos históricos: da Antiguidade ao século XIX}
 
@@ -181,16 +181,16 @@ para extrair raízes e resolver equações; a latinização do nome de al-Khwari
 tratado aritmético do século IX, está na origem do termo \emph{algoritmo}. Métodos que ainda hoje estudamos têm raízes igualmente antigas: procedimentos equivalentes à eliminação para sistemas lineares aparecem no tratado chinês \emph{Nove Capítulos sobre a Arte Matemática}, e métodos babilônicos de extração de raízes antecipam ideias que hoje reconhecemos em iterações do tipo Newton-Heron (BOYER; MERZBACH, 2011).
 
 Entre os séculos XVII e XIX, o desenvolvimento do cálculo diferencial e integral por Newton e
-Leibniz forneceu a base teórica sobre a qual floresceram os métodos numéricos modernos.
+Leibniz forneceu a base teórica sobre a qual se desenvolveram os métodos numéricos modernos.
 Surgiram técnicas que ainda hoje integram qualquer curso da disciplina: o método de
 Newton-Raphson para raízes de equações, as fórmulas de interpolação de Newton e de Lagrange,
 a quadratura para integração e o método dos mínimos quadrados. Nesse último caso, a atribuição
 histórica exige cuidado: Legendre publicou a formulação em 1805, enquanto Gauss afirmou tê-la
 usado antes e a desenvolveu em trabalhos de astronomia e geodesia publicados a partir de 1809
-(STIGLER, 1986). É justamente dessa tradição dos mínimos quadrados que, mais tarde, emergiria
+(STIGLER, 1986). É justamente dessa tradição dos mínimos quadrados que, mais tarde, surgiria
 a pseudoinversa. Nesse período, a ``computação'' era manual e apoiava-se em extensas tabelas de
-logaritmos e funções trigonométricas, laboriosamente calculadas e publicadas. Foi também nesse
-espírito que Charles Babbage anunciou, em 1822, a \emph{Máquina Diferencial}, projetada para
+logaritmos e funções trigonométricas, calculadas com grande esforço e publicadas. Foi também nesse
+contexto que Charles Babbage anunciou, em 1822, a \emph{Máquina Diferencial}, projetada para
 automatizar tabulações por diferenças finitas; a automação eletrônica de uso geral, porém, só se
 difundiria no século XX (BABBAGE, 1822; CERUZZI, 2003).
 
@@ -206,7 +206,7 @@ evidente a necessidade de automatizar o cálculo.
 
 Um exemplo do novo patamar de cálculo que as máquinas tornaram possível é o método de Monte Carlo. A técnica foi consolidada em Los Alamos no pós-guerra, em problemas de física matemática e transporte de partículas, e descrita classicamente por Metropolis e Ulam (1949). É uma técnica que ganha utilidade prática com bastante poder de cálculo, e Aquino (2020) a apresenta no capítulo final de seu livro como exemplo de como a simulação numérica ampliou o alcance da engenharia.
 
-A resposta veio por vários caminhos, sem uma única linha de sucessão: o ABC foi uma máquina eletrônica digital de propósito específico, o Colossus foi decisivo para criptoanálise, e o ENIAC, apresentado publicamente em 1946, tornou-se marco da computação eletrônica de propósito geral (CERUZZI, 2003). Em paralelo, o modelo teórico da máquina universal de Turing deu uma formulação abstrata para o conceito de computação (TURING, 1937). Desde o início, três coisas andaram juntas: a necessidade de resolver numericamente equações diferenciais e sistemas lineares grandes, o desenvolvimento de algoritmos eficientes e o crescimento da computação como área própria. Em 1947, von Neumann e Goldstine publicaram um dos primeiros estudos sistemáticos sobre erros de arredondamento na resolução de sistemas lineares, o que ajudou a firmar a \emph{análise numérica} como campo de pesquisa; mais tarde, James Wilkinson aprofundaria a análise de estabilidade (VON NEUMANN; GOLDSTINE, 1947; WILKINSON, 1963).
+A resposta veio por vários caminhos, sem uma única linha de desenvolvimento: o ABC foi uma máquina eletrônica digital de propósito específico, o Colossus foi decisivo para criptoanálise, e o ENIAC, apresentado publicamente em 1946, tornou-se marco da computação eletrônica de propósito geral (CERUZZI, 2003). Em paralelo, o modelo teórico da máquina universal de Turing deu uma formulação abstrata para o conceito de computação (TURING, 1937). Desde o início, três movimentos ocorreram em paralelo: a necessidade de resolver numericamente equações diferenciais e sistemas lineares grandes, o desenvolvimento de algoritmos eficientes e o crescimento da computação como área própria. Em 1947, von Neumann e Goldstine publicaram um dos primeiros estudos sistemáticos sobre erros de arredondamento na resolução de sistemas lineares, o que ajudou a firmar a \emph{análise numérica} como campo de pesquisa; mais tarde, James Wilkinson aprofundaria a análise de estabilidade (VON NEUMANN; GOLDSTINE, 1947; WILKINSON, 1963).
 
 \section{A era dos computadores pessoais e o cálculo numérico atual}
 
@@ -221,7 +221,7 @@ linear científica (ANDERSON et al., 1999).
 
 Nem todo avanço veio do hardware; alguns dos mais importantes foram algorítmicos. O caso mais conhecido é a Transformada Rápida de Fourier (FFT), popularizada por Cooley e Tukey em 1965, que reduziu o custo da transformada discreta de Fourier de $O(n^2)$ para $O(n\log n)$ em casos estruturados. Esse algoritmo foi decisivo para o processamento digital de sinais e para aplicações em telecomunicações e compressão (COOLEY; TUKEY, 1965). Também em 1965, Golub e Kahan publicaram um algoritmo estável para calcular valores singulares e pseudoinversas (GOLUB; KAHAN, 1965).
 
-O livro-texto desta disciplina (AQUINO, 2020) é um bom exemplo dessa cultura: usa o Scilab como ferramenta e prefere uma abordagem prática, apresentando cada método junto aos recursos que o tornam aplicável. O que importa reter é que o avanço da computação permitiu usar em larga escala métodos antes impraticáveis à mão. A pseudoinversa ilustra bem isso: sua formulação algébrica é de 1920, mas seu uso computacional amplo foi favorecido pelos algoritmos estáveis de SVD de Golub e Kahan (1965) e de Golub e Reinsch (1970). É esse o tema do próximo capítulo.
+O livro-texto desta disciplina (AQUINO, 2020) é um bom exemplo dessa cultura: usa o Scilab como ferramenta e prefere uma abordagem prática, apresentando cada método junto aos recursos que o tornam aplicável. O ponto principal é que o avanço da computação permitiu usar em larga escala métodos antes impraticáveis à mão. A pseudoinversa ilustra bem isso: sua formulação algébrica é de 1920, mas seu uso computacional amplo foi favorecido pelos algoritmos estáveis de SVD de Golub e Kahan (1965) e de Golub e Reinsch (1970). É esse o tema do próximo capítulo.
 
 % ===================== CAPITULO 2 - PSEUDOINVERSA ===========================
 \chapter{Pseudoinversa de Moore-Penrose}
@@ -234,7 +234,7 @@ clássica $A^{-1}$ só existe para matrizes quadradas e não singulares, o que f
 é atribuída a Eliakim Hastings Moore, que em 1920 apresentou à \emph{American Mathematical
 Society} a noção de ``recíproca geral'' de uma matriz qualquer (MOORE, 1920; BEN-ISRAEL;
 GREVILLE, 2003). O trabalho de Moore, contudo, empregava notação pouco difundida e permaneceu
-relativamente obscuro por décadas.
+pouco conhecido por décadas.
 
 O conceito foi redescoberto de forma independente em problemas aplicados, notadamente por Bjerhammar em geodésia no início da década de 1950, e depois por Roger Penrose, em 1955 (BJERHAMMAR, 1951; PENROSE, 1955). Penrose mostrou que, para toda matriz $A$, existe uma \emph{única} matriz $\Ap$ que satisfaz quatro equações simples, hoje chamadas de condições de Moore-Penrose. Essa caracterização reuniu as abordagens anteriores e fixou o nome ``pseudoinversa de Moore-Penrose''. Faltava ligar a teoria à prática computacional, e a decomposição em valores singulares foi decisiva para isso: os algoritmos de Golub e Kahan (1965) e de Golub e Reinsch (1970) tornaram o cálculo de valores singulares e soluções de mínimos quadrados numericamente estável, base para implementações modernas de $\Ap$ (GOLUB; KAHAN, 1965; GOLUB; REINSCH, 1970; GOLUB; VAN LOAN, 2013).
 
@@ -259,7 +259,7 @@ pseudoinversa é, de fato, uma extensão do conceito de inversa.
 
 \subsection{Cálculo pela decomposição em valores singulares}
 
-A forma numericamente robusta de obter $\Ap$ parte da decomposição em valores singulares
+A forma numericamente mais estável de obter $\Ap$ parte da decomposição em valores singulares
 (SVD). Toda matriz $A \in \R^{m\times n}$ admite a fatoração
 \begin{equation}
 A = U\,\Sigma\,V\T,
@@ -288,13 +288,13 @@ x^\star = \Ap b, \qquad
 x^\star = \arg\min_x \norm{Ax - b}_2 .
 \label{eq:mq}
 \end{equation}
-Para o caso de posto coluna completo, a equação normal $A\T A x = A\T b$ conduz à forma
+Para o caso de posto coluna completo, a equação normal $A\T A x = A\T b$ resulta na forma
 \begin{equation}
 \Ap = (A\T A)^{-1} A\T,
 \label{eq:normal}
 \end{equation}
 exatamente a expressão apresentada por Aquino (2020, p.~105), que a denomina ``pseudo-inversa
-ou inversa generalizada de Moore-Penrose''. Convém lembrar, porém, que a expressão~\eqref{eq:normal} é um caso particular: ela só vale quando $A\T A$ é invertível e, mesmo assim, pode ser mal condicionada, pois a formação de $A\T A$ eleva o número de condição ao quadrado. A forma via SVD~\eqref{eq:pinv} vale para qualquer matriz, inclusive as deficientes em posto, e é numericamente preferível em implementações robustas (GOLUB; VAN LOAN, 2013; HIGHAM, 2002).
+ou inversa generalizada de Moore-Penrose''. Convém lembrar, porém, que a expressão~\eqref{eq:normal} é um caso particular: ela só vale quando $A\T A$ é invertível e, mesmo assim, pode ser mal condicionada, pois a formação de $A\T A$ eleva o número de condição ao quadrado. A forma via SVD~\eqref{eq:pinv} vale para qualquer matriz, inclusive as deficientes em posto, e é numericamente preferível em implementações mais estáveis (GOLUB; VAN LOAN, 2013; HIGHAM, 2002).
 
 \subsection{Sistemas subdeterminados: mínima norma}
 
@@ -390,7 +390,7 @@ por números muito pequenos que amplificariam o ruído.
 
 \subsection{Validação}
 
-A corretude da implementação foi verificada de duas formas. Primeiro, comparando $\Ap$ com o
+A implementação foi validada de duas formas. Primeiro, comparando $\Ap$ com o
 resultado de \texttt{numpy.linalg.pinv} para a matriz
 $A=\begin{psmallmatrix}1&2&3\\0&1&1\\2&0&2\\1&3&4\end{psmallmatrix}$, que tem posto~2. A diferença, em norma de Frobenius, foi de
 $2{,}4\times 10^{-17}$, ou seja, na ordem da precisão de máquina. Segundo, verificando
@@ -485,7 +485,7 @@ o limite teórico $\kappa(A)\cdot\delta$, o que mostra a perda de estabilidade e
 \label{fig:cond}
 \end{figure}
 
-Na prática, isso quer dizer que, quando $\kappa(A)$ é grande, nem o cálculo exato da pseudoinversa protege contra a amplificação dos erros já presentes nos dados. Em problemas inversos e dados ruidosos, a SVD truncada pode ajudar: ao descartar os valores singulares minúsculos, ela introduz viés, mas pode reduzir a variância e a sensibilidade ao ruído (HANSEN, 2010).
+Na prática, isso quer dizer que, quando $\kappa(A)$ é grande, nem o cálculo exato da pseudoinversa protege contra a amplificação dos erros já presentes nos dados. Em problemas inversos e dados ruidosos, a SVD truncada pode ajudar: ao descartar os valores singulares muito pequenos, ela introduz viés, mas pode reduzir a variância e a sensibilidade ao ruído (HANSEN, 2010).
 
 \section{Aplicações em Engenharia de Computação e Telecomunicações}
 
@@ -521,11 +521,11 @@ $\theta = X^{+} y$, onde $X$ é a matriz de características; quando $X$ tem pos
 % ===================== CAPITULO 3 - REFLEXAO ================================
 \chapter{Reflexão: cálculo numérico, computação e engenharia}
 
-O estudo da pseudoinversa deixa ver uma ideia mais geral: o cálculo numérico e a ciência da computação moderna estão profundamente ligados. A formulação algébrica de $\Ap$ existe desde 1920, mas seu uso prático em larga escala dependeu de algoritmos estáveis de SVD e de hardware capaz de executá-los. História e técnica andam juntas: muitos métodos nascem de necessidades computacionais e, depois de amadurecidos, ampliam o que a engenharia consegue fazer.
+O estudo da pseudoinversa mostra uma ideia mais geral: o cálculo numérico e a ciência da computação moderna estão profundamente ligados. A formulação algébrica de $\Ap$ existe desde 1920, mas seu uso prático em larga escala dependeu de algoritmos estáveis de SVD e de hardware capaz de executá-los. História e técnica andam juntas: muitos métodos nascem de necessidades computacionais e, depois de amadurecidos, ampliam o que a engenharia consegue fazer.
 
-Para o engenheiro de computação e de telecomunicações, isso exige alguns conceitos que este trabalho ilustrou na prática. Um é a noção de \emph{erro} (absoluto, relativo, de arredondamento e de truncamento). Como lembra Aquino (2020), uma pequena perturbação pode ser amplificada até levar a uma resposta sem sentido, e o número de condição é o que mede esse risco. Outro é a \emph{estabilidade}: vimos que a forma via SVD da pseudoinversa é melhor que a equação normal por ser mais estável, embora as duas sejam ``corretas'' no papel. O terceiro é a \emph{escolha do método}: não adianta funcionar só na teoria; é preciso escolher a variante numericamente segura para o problema concreto.
+Para o engenheiro de computação e de telecomunicações, isso exige dominar alguns conceitos que este trabalho ilustrou na prática. Um é a noção de \emph{erro} (absoluto, relativo, de arredondamento e de truncamento). Como lembra Aquino (2020), uma pequena perturbação pode ser amplificada até levar a uma resposta sem sentido, e o número de condição mede esse risco. Outro é a \emph{estabilidade}: vimos que a forma via SVD da pseudoinversa é melhor que a equação normal por ser mais estável, embora as duas sejam ``corretas'' no papel. O terceiro é a \emph{escolha do método}: não basta funcionar na teoria; é preciso escolher a variante numericamente segura para o problema concreto.
 
-Esse estudo também deixou clara a importância de validar resultados por mais de um caminho. Verificar os resíduos das quatro condições de Moore-Penrose e confrontar a implementação própria com uma rotina consagrada não é mero formalismo: é a aplicação prática do princípio, defendido por Aquino (2020), de que os erros devem ser minimizados ou, ao menos, identificados, empregando técnicas distintas para que os resultados sejam comparados. A regularização pela SVD truncada, por sua vez, ilustra um compromisso recorrente na engenharia: aceitar viés em troca de menor sensibilidade ao ruído.
+Esse estudo também deixou clara a importância de validar resultados por mais de um caminho. Verificar os resíduos das quatro condições de Moore-Penrose e confrontar a implementação própria com uma rotina consagrada não é apenas uma formalidade: é a aplicação prática do princípio, defendido por Aquino (2020), de que os erros devem ser minimizados ou, ao menos, identificados, empregando técnicas distintas para comparar os resultados. A regularização pela SVD truncada, por sua vez, ilustra um compromisso recorrente na engenharia: aceitar viés em troca de menor sensibilidade ao ruído.
 
 Há, ainda, uma reflexão sobre o uso de bibliotecas prontas \emph{versus} a implementação
 própria. Ferramentas como \texttt{pinv} do Scilab ou do NumPy resolvem o problema com uma única
@@ -535,7 +535,7 @@ o resultado, e um usuário desavisado pode não perceber que sua matriz é mal c
 Implementar a pseudoinversa do zero, como se fez aqui, revela essas decisões internas e forma o
 julgamento necessário para usar as ferramentas prontas com responsabilidade.
 
-Por fim, a computação continua influenciando os métodos numéricos. A computação de alto desempenho e as GPUs mudam o que é viável calcular em álgebra linear, otimização e simulação. Mesmo temas emergentes, como a computação quântica, podem alterar no futuro a forma de tratar certos problemas numéricos, mas ainda não substituem as técnicas clássicas no uso cotidiano. O cálculo numérico, portanto, não é um assunto encerrado; segue muito ativo.
+Por fim, a computação continua influenciando os métodos numéricos. A computação de alto desempenho e as GPUs mudam o que é viável calcular em álgebra linear, otimização e simulação. Mesmo temas emergentes, como a computação quântica, podem alterar no futuro a forma de tratar certos problemas numéricos, mas ainda não substituem as técnicas clássicas no uso cotidiano. O cálculo numérico, portanto, não é um tema encerrado; continua em desenvolvimento.
 
 % ========================== CONCLUSAO =======================================
 \chapter*{Conclusão}
